@@ -86,6 +86,9 @@ body {
 
 <!-- Copy the following script to view your home in the previous canvas -->
 <script type="text/javascript">
+  document.getElementById("viewerCanvas").width = window.screen.width * 0.99;
+  document.getElementById("viewerCanvas").height = window.screen.height * 0.73;
+
   var homeUrl = "Dom%20w%20everniach.zip";
   var onerror = function(err) {
       if (err == "No WebGL") {
