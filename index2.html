@@ -35,10 +35,6 @@
 
 <body>
     <div class="wrapper">
-      <main id="main" class="page-main">
-          <canvas id="viewerCanvas" class="viewerComponent" width="800" height="600"
-                  style="background-color: #CCCCCC; border: 1px solid gray; outline:none" tabIndex="1"></canvas>
-      </main>
       <div>
           <div id="viewerProgressDiv">
             <progress id="viewerProgress"  class="viewerComponent" value="0" max="200" style="width: 400px"></progress>
@@ -52,6 +48,10 @@
             <select id="levelsAndCameras" class="viewerComponent" style="visibility: hidden;"></select>
           </div>
       </div>
+      <main id="main" class="page-main">
+          <canvas id="viewerCanvas" class="viewerComponent" width="800" height="600"
+                  style="background-color: #CCCCCC; border: 1px solid gray; outline:none" tabIndex="1"></canvas>
+      </main>
     </div>
     <script type="text/javascript">
       var homeUrl = "Dom%20w%20everniach.zip";
@@ -86,7 +86,7 @@
             let main = document.getElementById('main');
             let canvas = document.getElementById('viewerCanvas');
             
-            canvas.height = main.offsetHeight - 7;
+            canvas.height = main.offsetHeight;
             canvas.width = main.offsetWidth;
 
             viewHome("viewerCanvas",    // Id of the canvas
